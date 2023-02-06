@@ -1,0 +1,24 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal %}
+
+    <p>Usuarios</p>
+
+{% endblock %}
+
+{% block bloque2 %}
+
+    <p><h2>En este apartado puedes:</h2></p>
+    
+      
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href=" {% url 'buscarUsuarios' %}" >Buscar un usuario</a>
+            <a class="navbar-brand" href=" {% url 'cargarUsuarios' %}" >Cargar un usuario</a>
+            <a class="navbar-brand" href=" {% url 'verUsuarios' %} " >Ver el listado completo de usuarios</a> 
+           
+        </div>
+    </nav>
+
+{% endblock %}
+

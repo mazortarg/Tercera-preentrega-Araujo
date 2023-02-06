@@ -1,0 +1,53 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    Listado completo de prestamos
+
+{% endblock %}
+
+
+{% block bloque2%}
+<center>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+     
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+     
+    th,
+    td {
+        padding: 5px;
+    }
+</style>
+    Los prestamos de la biblioteca son:<p>
+     <table  border: 1px solid black;>
+        <tr>
+            <th>Titulo</th>
+            <th>Usuario doc.</th>
+            <th>Fecha de prestamo</th>
+            <th>Devuelto</th>
+        </tr>    
+        {% for prestamo in todos %}
+        <tr>
+            <td>{{prestamo.lib}} </td>  
+            <td>{{prestamo.user}} </td>  
+            <td>{{prestamo.fecha}} </td>
+            <td>{{prestamo.devuelto}} </td>
+        </tr> 
+           
+        {% endfor %}
+    </table>
+
+</center>
+{% endblock %}
+
+
+
+
+

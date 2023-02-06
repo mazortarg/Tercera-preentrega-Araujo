@@ -1,0 +1,47 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    Resultado de la Busqueda 
+
+{% endblock %}
+
+
+{% block bloque2%}
+<center>
+    <p>Buscando el usuario: {{nombreBusqueda}}
+    </p>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+         
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+         
+        th,
+        td {
+            padding: 5px;
+        }
+    </style>
+
+         <table  border: 1px solid black;>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI:</th>
+            </tr>    
+            {% for usuario in resultado %}
+            <tr>
+                <td>{{usuario.nombre}} </td>  
+                <td>{{usuario.apellido}} </td>  
+                <td> Nº {{usuario.documento}} </td>
+            </tr> 
+               
+            {% endfor %}
+        </table>
+</center>
+{% endblock %}

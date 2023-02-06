@@ -1,0 +1,20 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    Busqueda de usuario en la base de datos
+
+{% endblock %}
+
+
+{% block bloque2%}
+<center>
+<p>Ingrese el nombre del usuario a buscar</p>
+<form action="/AppBiblio/resultado2" method= "GET">
+       
+    <input type = "text" name="nombre" >
+    <input type = "submit" value="Buscar">
+    
+</form>
+</center>
+{% endblock %}

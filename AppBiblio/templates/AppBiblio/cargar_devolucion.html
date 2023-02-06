@@ -1,0 +1,20 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    Devoluciones
+
+{% endblock %}
+
+
+{% block bloque2%}
+<center>
+<p>Ingrese el inventario del libro a registrar como devuelto</p>
+<form action="/AppBiblio/resultado3" method= "GET">
+       
+    <input type = "text" name="inventario" >
+    <input type = "submit" value="Buscar">
+    
+</form>
+</center>
+{% endblock %}

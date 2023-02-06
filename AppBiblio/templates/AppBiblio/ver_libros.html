@@ -1,0 +1,48 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    Listado completo de libros
+
+{% endblock %}
+
+
+{% block bloque2%}
+<style>
+    table {
+        border-collapse: collapse;
+    }
+     
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+     
+    th,
+    td {
+        padding: 5px;
+    }
+</style>
+    Los libros que dispone la biblioteca son:<p>
+     <table  border: 1px solid black;>
+        <tr>
+            <th>Titulo</th>
+            <th>Inventario</th>
+        </tr>    
+        {% for libros in todos %}
+        <tr>
+            <td>{{libros.titulo}} </td>  
+            <td> Nº {{libros.inventario}} </td>
+        </tr> 
+           
+        {% endfor %}
+    </table>
+
+
+{% endblock %}
+
+
+
+
+

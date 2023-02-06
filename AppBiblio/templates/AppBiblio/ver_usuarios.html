@@ -1,0 +1,51 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    Listado completo de usuarios
+
+{% endblock %}
+
+
+{% block bloque2%}
+<center>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+     
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+     
+    th,
+    td {
+        padding: 5px;
+    }
+</style>
+    Los usuarios de la biblioteca son:<p>
+     <table  border: 1px solid black;>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>DNI:</th>
+        </tr>    
+        {% for usuario in todos %}
+        <tr>
+            <td>{{usuario.nombre}} </td>  
+            <td>{{usuario.apellido}} </td>  
+            <td> Nº {{usuario.documento}} </td>
+        </tr> 
+           
+        {% endfor %}
+    </table>
+
+</center>
+{% endblock %}
+
+
+
+
+

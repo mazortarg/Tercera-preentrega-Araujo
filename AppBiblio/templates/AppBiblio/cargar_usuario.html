@@ -1,0 +1,27 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    Carga de usuarios a la base de datos
+
+{% endblock %}
+
+
+{% block bloque2%}
+<center>
+<p>Ingrese los datos del Usuario</p>
+    <form action="" method= "POST"> {% csrf_token %}
+        <script>
+            function myFunction() {
+                window.alert("Usuario cargado con exito");
+            }
+        </script>
+        <table>
+            {{miFormulario}}
+            
+        </table>
+        <input type = "submit" value="Cargar" onclick="return myFunction();">
+        
+    </form>
+</center>
+{% endblock %}

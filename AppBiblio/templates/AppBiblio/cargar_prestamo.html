@@ -1,0 +1,27 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    Carga de prestamos
+
+{% endblock %}
+
+
+{% block bloque2%}
+<center>
+<p>Ingrese los datos del libro para cargar</p>
+    <form action="" method= "POST"> {% csrf_token %}
+        <script>
+            function myFunction() {
+                window.alert("Libro cargado con exito");
+            }
+        </script>
+        <table>
+            {{miFormulario}}
+            
+        </table>
+        <input type = "submit" value="Cargar" onclick="return myFunction();">
+        
+    </form>
+</center>
+{% endblock %}

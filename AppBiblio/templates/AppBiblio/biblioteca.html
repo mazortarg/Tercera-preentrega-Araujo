@@ -1,0 +1,27 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    <p>Biblioteca</p>
+    <p>Administracion de recursos</p>
+    
+        
+{% endblock %}
+
+{% block bloque2 %}
+
+    <p><h2>En este apartado puedes:</h2></p>
+    
+      
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href=" {% url 'buscarLibro' %} " >Buscar un libro</a>
+            <a class="navbar-brand" href=" {% url 'cargarLibro' %} " >Cargar un libro</a>
+            <a class="navbar-brand" href=" {% url 'verLibros' %} " >Ver el listado completo</a> 
+           
+        </div>
+    </nav>
+
+{% endblock %}
+
+

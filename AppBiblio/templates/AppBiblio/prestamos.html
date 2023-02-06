@@ -1,0 +1,26 @@
+{% extends 'AppBiblio/principal.html' %}
+
+{% block principal%}
+
+    <p>Prestamos</p>
+
+    
+{% endblock %}
+
+{% block bloque2 %}
+
+    <p><h2>En este apartado puedes:</h2></p>
+    
+      
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <li><a class="navbar-brand" href=" {% url 'cargarPrestamos' %} " >Cargar prestamo</a></li>
+            <li><a class="navbar-brand" href=" {% url 'cargarDevolucion' %} " >Cargar devolucion</a></li>
+            <li><a class="navbar-brand" href=" {% url 'verPrestamos' %} " >Ver el listado completo de prestamos</a></li>   
+            <!-- <li><a href=" {% url 'verUsuarios' %} " style="color:rgb(253, 254, 254);">Ver el listado completo de prestamos por usuario</a></li>   -->
+           
+        </div>
+    </nav>
+
+{% endblock %}
+
